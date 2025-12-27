@@ -3,7 +3,7 @@
 # Константы
 BASE_DIR="$(realpath "$(dirname "$0")")"
 REPO_DIR="$BASE_DIR/zapret-latest"
-REPO_URL="https://github.com/Dazai675/zapret-discord-youtube-roblox"
+REPO_URL="https://github.com/Flowseal/zapret-discord-youtube"
 NFQWS_PATH="$BASE_DIR/nfqws"
 CONF_FILE="$BASE_DIR/conf.env"
 STOP_SCRIPT="$BASE_DIR/stop_and_clean_nft.sh"
@@ -74,7 +74,7 @@ setup_repository() {
             log "Обновление репозитория..."
             rm -rf "$REPO_DIR"
             git clone "$REPO_URL" "$REPO_DIR" || handle_error "Ошибка при клонировании репозитория"
-            cd "$REPO_DIR" && git checkout 14d5133 && cd ..
+            cd "$REPO_DIR" && git checkout a609396772dfe2a3c85b0cec8c314ff9ac96a5c0 && cd ..
             # rename_bat.sh
             chmod +x "$BASE_DIR/rename_bat.sh"
             rm -rf "$REPO_DIR/.git"
@@ -85,7 +85,7 @@ setup_repository() {
     else
         log "Клонирование репозитория..."
         git clone "$REPO_URL" "$REPO_DIR" || handle_error "Ошибка при клонировании репозитория"
-        cd "$REPO_DIR" && git checkout 14d5133 && cd ..
+        cd "$REPO_DIR" && git checkout a609396772dfe2a3c85b0cec8c314ff9ac96a5c0 && cd ..
         # rename_bat.sh
         chmod +x "$BASE_DIR/rename_bat.sh"
         rm -rf "$REPO_DIR/.git"
